@@ -19,6 +19,6 @@ jobs:
           toolchain: nightly
 
       - name: Build
-        run: cargo build --release
+        run: cargo +nightly build --release
       - name: deploy
-        run: cargo run
+        run: cargo +nightly run
