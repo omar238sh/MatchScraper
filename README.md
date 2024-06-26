@@ -1,52 +1,111 @@
+Certainly! Below is a sample `README.md` file for your Rust project. This file includes project description, setup instructions, usage details, and contribution guidelines.
 
-# Yallakora Scraper
+```markdown
+# Match API
 
-A simple web scraper written in Rust using the reqwest and scraper crates to scrape match data from Yallakora website and save it to a CSV file.
-
-## Introduction
-
-This project is a Rust application that scrapes match data from the Yallakora website based on the provided date and saves it to a CSV file. It allows users to input a date in the MM/DD/YYYY format and retrieves the match data for that date.
+This is a simple API built with Rust using the Rocket framework. It allows users to retrieve match data based on a specified date.
 
 ## Features
 
-- Retrieves match data from the Yallakora website based on the provided date.
-- Scrapes team names and match results.
-- Saves the scraped data to a CSV file for further analysis.
+- Retrieve match data by date in the format `/DD/MM/YYYY`.
+- Simple and easy-to-use API endpoints.
 
-## Installation
+## Setup
 
-To install and run this project, follow these steps:
+### Prerequisites
+
+- Rust installed (version 1.65.0 or later)
+- Cargo (Rust's package manager and build tool)
+- Git
+
+### Installation
 
 1. Clone the repository:
 
-```
-git clone https://github.com/omar238sh/MatchScraper.git
-```
+   ```bash
+   git clone https://github.com/your-username/match-api.git
+   cd match-api
+   ```
 
 2. Build the project:
 
-```
-cargo build
-```
+   ```bash
+   cargo build
+   ```
 
 3. Run the project:
 
+   ```bash
+   cargo run
+   ```
+
+### Running the Server
+
+Once the server is running, you can access it at `http://localhost:8000`.
+
+## Endpoints
+
+- **GET** `/`
+
+  Returns a welcome message and information about the API.
+
+  Example response:
+
+  ```json
+  {
+    "message": "Hello, you are using my API. You can get match data by adding the parameter /DD/MM/YYYY."
+  }
+  ```
+
+- **GET** `/{DD}/{MM}/{YYYY}`
+
+  Retrieve match data for the specified date.
+
+  Example URL: `http://localhost:8000/16/06/2024`
+
+  Example response:
+
+  ```json
+  [
+    {
+      "message": "connected",
+      "team1": "Team A",
+      "team2": "Team B",
+      "scores": "2-1"
+    },
+    {
+      "message": "connected",
+      "team1": "Team C",
+      "team2": "Team D",
+      "scores": "1-1"
+    }
+  ]
+  ```
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Create a new Pull Request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+- GitHub: [your-username](https://github.com/your-username)
+- Email: your-email@example.com
+
 ```
-cargo run
-```
 
-## Usage
+### Instructions for Using the README
 
-When prompted, enter the date in the MM/DD/YYYY format to retrieve match data for that date from the Yallakora website. The scraped data will be saved to a file named `data.csv` in the project directory.
+1. **Clone the Repository**: Use the clone URL provided in the `git clone` command.
+2. **Set Up the Project**: Follow the instructions to install dependencies and build the project.
+3. **Run the Server**: Start the server and access the endpoints as described.
 
-
-
-
-## Acknowledgements
-
-- This project uses the reqwest and scraper crates for web scraping.
-- Special thanks to the Yallakora website for providing the match data.
-
-
-
-
+Feel free to adjust the content, such as URLs, project name, and personal information, to fit your specific needs!
