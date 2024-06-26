@@ -1,6 +1,4 @@
-Certainly! Below is a sample `README.md` file for your Rust project. This file includes project description, setup instructions, usage details, and contribution guidelines.
 
-```markdown
 # Match API
 
 This is a simple API built with Rust using the Rocket framework. It allows users to retrieve match data based on a specified date.
@@ -100,12 +98,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - GitHub: [your-username](https://github.com/your-username)
 - Email: your-email@example.com
 
-```
-
-### Instructions for Using the README
-
-1. **Clone the Repository**: Use the clone URL provided in the `git clone` command.
-2. **Set Up the Project**: Follow the instructions to install dependencies and build the project.
-3. **Run the Server**: Start the server and access the endpoints as described.
-
-Feel free to adjust the content, such as URLs, project name, and personal information, to fit your specific needs!
