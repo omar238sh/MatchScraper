@@ -10,14 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - name: Install Rust
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Rust nightly
         uses: actions-rs/toolchain@v1
         with:
-          profile: minimal
-          toolchain: stable
-      
+          toolchain: nightly
+
       - name: Build
-        run: cargo build --release
+        run: cargo +nightly build --release
       
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
