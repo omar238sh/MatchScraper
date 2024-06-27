@@ -75,9 +75,5 @@ fn start() -> String {
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/", routes![matches , start]).configure(rocket::Config {
-        address: "0.0.0.0".parse().unwrap(),
-        port: 8000,
-        ..rocket::Config::default()
-    })
+    rocket::build().mount("/", routes![matches , start])
 }
